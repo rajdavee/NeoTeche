@@ -51,7 +51,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-black">
       <SEO
-        title="NeoTeq - AI & GPU Optimization | Enterprise AI Solutions"
+        title="Neoteq. AI - AI & GPU Optimization | Enterprise AI Solutions"
         description="Transform your business with cutting-edge AI and GPU optimization solutions. Industry-leading expertise in machine learning, deep learning, and high-performance computing. Request a demo today."
         keywords="AI optimization, GPU acceleration, machine learning development, artificial intelligence consulting, MLOps, data engineering, AI security, CUDA programming, deep learning, neural networks, computer vision, NLP, enterprise AI"
       />
