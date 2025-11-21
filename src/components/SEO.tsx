@@ -15,12 +15,14 @@ export function SEO({
   description,
   keywords = 'AI optimization, GPU acceleration, machine learning, artificial intelligence, AI consulting, MLOps, data engineering',
   canonical,
-  ogImage = 'https://neoteq.ai/og-image.jpg',
+  ogImage = '/og-image.jpg',
   ogType = 'website'
 }: SEOProps) {
   const location = useLocation();
   const baseUrl = 'https://neoteq.ai';
   const currentUrl = `${baseUrl}${location.pathname}`;
+  // Convert relative ogImage path to absolute URL
+  const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
   useEffect(() => {
     // Update document title
@@ -35,14 +37,14 @@ export function SEO({
     updateMetaTag('property', 'og:description', description);
     updateMetaTag('property', 'og:url', currentUrl);
     updateMetaTag('property', 'og:type', ogType);
-    updateMetaTag('property', 'og:image', ogImage);
-    updateMetaTag('property', 'og:site_name', 'NeoTeq - AI & GPU Optimization');
+    updateMetaTag('property', 'og:image', ogImageUrl);
+    updateMetaTag('property', 'og:site_name', 'Neoteq. AI');
     
     // Twitter Card tags
     updateMetaTag('name', 'twitter:card', 'summary_large_image');
     updateMetaTag('name', 'twitter:title', title);
     updateMetaTag('name', 'twitter:description', description);
-    updateMetaTag('name', 'twitter:image', ogImage);
+    updateMetaTag('name', 'twitter:image', ogImageUrl);
     updateMetaTag('name', 'twitter:site', '@neoteq');
     
     // Canonical URL
@@ -88,7 +90,7 @@ export function SEO({
         'query-input': 'required name=search_term_string'
       }
     });
-  }, [title, description, keywords, canonical, currentUrl, ogImage, ogType, baseUrl]);
+  }, [title, description, keywords, canonical, currentUrl, ogImageUrl, ogType, baseUrl]);
 
   return null;
 }

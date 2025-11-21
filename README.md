@@ -1,7 +1,7 @@
 
-  # Dark-Themed Multi-Page Website (Copy)
+  # Neoteq. AI
 
-  This is a code bundle for Dark-Themed Multi-Page Website (Copy). The original project is available at https://www.figma.com/design/45cJOUtYEG3U6cfdTUomLH/Dark-Themed-Multi-Page-Website--Copy-.
+  This is a code bundle for Neoteq. AI.
 
   ## Running the code
 
